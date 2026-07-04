@@ -1,0 +1,596 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+@media (max-width: 991px){
+
+    html,
+    body{
+        overflow-x: hidden;
+    }
+
+    .goog-te-banner-frame,
+    .goog-te-balloon-frame,
+    .VIpgJd-ZVi9od-aZ2wEe,
+    .VIpgJd-ZVi9od-aZ2wEe-OiiCO,
+    .VIpgJd-ZVi9od-aZ2wEe-wOHMyf{
+        max-width: 100% !important;
+    }
+}
+
+
+
+/*nav icon hide only responsive */
+
+/* nav responsive section different start*/
+
+@media (max-width: 767px) {
+
+    /* Products dropdown open area */
+    .main-menu .navigation > li.dropdown > ul {
+        background: #f5f8ff !important;
+        border-left: 4px solid #0d6efd;
+        margin-top: 5px;
+        border-radius: 8px;
+        padding: 8px 0;
+    }
+
+    /* Nested dropdown (CP Bath Fittings, Sanitaryware) */
+    .main-menu .navigation li.dropdown ul li.dropdown > ul {
+        background: #ffffff !important;
+        border-left: 3px solid #0d6efd;
+        margin: 5px 0 5px 15px;
+        border-radius: 6px;
+    }
+
+    /* First level submenu links */
+    .main-menu .navigation > li.dropdown > ul > li > a {
+        padding-left: 20px;
+        font-weight: 500;
+    }
+
+    /* Second level submenu links */
+    .main-menu .navigation li.dropdown ul li.dropdown ul li a {
+        padding-left: 35px;
+        font-size: 16px;
+        color: #8e78db;
+    }
+
+    /* Dropdown parent highlight */
+    .main-menu .navigation li.dropdown > a {
+        position: relative;
+    }
+
+    /* Products active/open state */
+    .main-menu .navigation li.dropdown.open > a,
+    .main-menu .navigation li.dropdown.current > a {
+        background: #0d6efd;
+        color: #fff !important;
+        border-radius: 6px;
+    }
+}
+
+
+
+@media only screen and (max-width: 991px){
+    .mainmenu-right.style2{
+        display: none !important;
+    }
+}
+   
+
+
+/* nav section start */
+
+@media (max-width: 768px) {
+  .logo-box-style2 img {
+    margin-top: -10px;
+    width: 180px !important; 
+    height: auto;
+  }
+}
+
+
+/* bottom to top section start */
+
+.fera-whatsapp-btn,
+.fera-scroll-top-btn{
+    position: fixed;
+    right: 20px;
+
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    text-decoration: none;
+    border-radius: 50%;
+
+    color: #fff;
+    cursor: pointer;
+
+    z-index: 999999;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+
+    transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* SHOW */
+.fera-whatsapp-btn.fera-show,
+.fera-scroll-top-btn.fera-show{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* 
+   WHATSAPP BUTTON
+*/
+
+.fera-whatsapp-btn{
+    bottom: 90px;
+    background: #25D366;
+    font-size: 30px;
+    box-shadow: 0 10px 25px rgba(37,211,102,.35);
+}
+
+/* SCROLL TOP BUTTON */
+.fera-scroll-top-btn{
+    bottom: 20px;
+    background: #8e0a0a;
+    font-size: 22px;
+    box-shadow: 0 10px 25px rgba(142,10,10,.35);
+}
+
+/* hover lift */
+.fera-whatsapp-btn:hover,
+.fera-scroll-top-btn:hover{
+    transform: translateY(8px);
+}
+
+.fera-scroll-top-btn i{
+    transition: transform 0.3s ease;
+}
+
+/* hover pe arrow thoda upar jaye */
+.fera-scroll-top-btn:hover i{
+    transform: translateY(-3px);
+}
+
+/* 
+   PREMIUM CHAT LABEL
+*/
+
+.fera-whatsapp-btn::after{
+    content: "Chat with us";
+    position: absolute;
+
+    right: 70px;
+
+    background: rgba(255,255,255,0.95);
+    color: #111;
+
+    padding: 7px 20px;
+    border-radius: 999px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateX(15px) scale(0.95);
+
+    transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.12),
+        0 2px 8px rgba(0,0,0,0.08);
+
+    backdrop-filter: blur(6px);
+    border: 2px solid rgb(51, 239, 95);
+}
+
+/* connector line */
+.fera-whatsapp-btn::before{
+    content: "";
+    position: absolute;
+
+    right: 65px;
+    top: 30%;
+
+    width: 18px;
+    height: 2px;
+
+    background: linear-gradient(90deg, rgba(255,255,255,0.9), transparent);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: scaleX(0);
+    transform-origin: right;
+
+    transition: all 0.35s ease;
+}
+
+/* SHOW ON HOVER */
+.fera-whatsapp-btn:hover::after{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0) scale(1);
+}
+
+.fera-whatsapp-btn:hover::before{
+    opacity: 1;
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+@media (max-width: 767px){
+    .fera-whatsapp-btn:hover,
+    .fera-scroll-top-btn:hover{
+        transform: none;
+    }
+
+    .fera-whatsapp-btn:active,
+    .fera-scroll-top-btn:active{
+        transform: scale(0.95);
+    }
+}
+
+.fera-whatsapp-btn,
+.fera-scroll-top-btn{
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+}
+/* top to bottom section End */
+
+
+
+
+/* Banar responsive home page start*/
+
+
+
+  /* box color changes*/
+.single-featured-box .inner {
+    background: #8e0a0a !important; 
+}
+
+
+
+
+@media only screen and (max-width: 767px){
+
+    /* Heading thodi niche */
+    .main-slider .big-title{
+        margin-top: 30px !important;
+        font-size: 30px !important;
+    }
+
+    /* Button */
+    .main-slider .btn-box .btn-one{
+        font-size:10px !important;
+        padding:1px 8px !important;
+        line-height:40px !important;
+    }
+
+    .main-slider .btn-box .btn-one span{
+        font-size:10px !important;
+    }
+
+}
+
+@media only screen and (max-width: 767px){
+
+    .main-slider .btn-box{
+        margin-top: -30px !important;
+    }
+
+}
+
+/* banar home page end */
+
+
+
+
+
+
+
+/* static section sttart */
+
+.parallax-section{
+    position: relative;
+    width: 100%;
+    padding: 220px 0;
+    background-image: url("#");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/* CONTENT CENTER */
+.parallax-section .content{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 15px;
+}
+
+/* BOX DESIGN */
+.hero-box{
+    max-width: 600px;
+    padding: 40px 35px;
+    border: 2px solid rgba(255,255,255,0.7);
+    background: rgba(0,0,0,0.25);
+    border-radius: 6px;
+}
+
+.hero-box h1{
+    color: #fff;
+    font-size: 50px;
+    line-height: 1.6em;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+
+.hero-box .name{
+    color: #ffffff;
+    font-size: 16px;
+    font-style: italic;
+    opacity: 0.8;
+    letter-spacing: 1.5px;
+}
+
+
+@media only screen and (max-width: 991px){
+
+    .parallax-section{
+        padding: 180px 0;
+        background-attachment: scroll;
+    }
+
+    .hero-box h1{
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 767px){
+
+    .parallax-section{
+        padding: 140px 0;
+    }
+
+    .hero-box{
+        padding: 30px 25px;
+    }
+
+    .hero-box h1{
+        font-size: 30px;
+    }
+
+    .hero-box p{
+      font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+
+    .parallax-section{
+       padding: 110px 0;
+    }
+
+    .hero-box h1{
+       font-size: 24px;
+    }
+
+    .hero-box p{
+      font-size: 13px;
+    }
+}
+
+/* static section End */
+
+
+
+
+/* language section start*/
+
+.language-btn{
+  height: 34px;
+  padding: 0 14px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 20px;
+  font-size: 12px;
+
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  
+  transition: 0.3s;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.language-btn span{
+  color: #222;
+  transition: 0.3s;
+}
+
+.active-lang{
+  color: #8e0a0a !important;
+  font-weight: 600;
+}
+
+.sep{
+  color: #aaa;
+}
+
+.arrow{
+  font-size: 11px;
+  margin-left: 5px;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.language-btn:hover{
+  border-color: #8e0a0a;
+}
+
+.mainmenu-right.style2{
+  float: right;
+  margin-top: 10px;
+}
+
+
+
+@media (max-width: 991px){
+
+  .mainmenu-right.style2{
+    float: none;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .language-btn{
+    margin-left: 0;
+  }
+}
+
+
+@media (max-width: 767px){
+
+  .inner-container{
+    display: block;
+  }
+
+  /* logo stays left */
+  .logo-box-style2{
+    float: left;
+  }
+
+
+  .navbar-header{
+    float: right;
+    display: block;
+  }
+
+
+  .mainmenu-right.style2{
+    float: right;
+    width: auto;
+    margin-top: 15px;
+    margin-right: 20px; 
+  }
+
+  /* button size adjust */
+  .language-btn{
+    height: 30px;
+    font-size: 11px;
+    padding: 0 10px;
+  }
+
+  .arrow{
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px){
+
+  .mainmenu-right.style2{
+    margin-right: 26px;
+  }
+
+  .language-btn{
+    padding: 0 8px;
+    gap: 4px;
+  }
+}
+
+
+/* language section End */
+
+
+
+
+/* product section start */
+
+
+/* REMOVE OLD OVERLAY */
+.overlay-style-two{
+  display: none !important;
+}
+
+
+.single-blog-post .img-holder{
+  position: relative;
+  overflow: hidden;
+}
+
+/* IMAGE */
+.single-blog-post .img-holder img{
+  width: 100%;
+  display: block;
+  transition: 0.5s ease;
+}
+
+/* ZOOM EFFECT */
+.single-blog-post:hover .img-holder img{
+  transform: scale(1.08);
+}
+
+
+
+.single-blog-post .overlay{
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    135deg,
+    rgba(142,10,10,0.75),
+    rgba(0,0,0,0.45)
+  );
+        
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s ease;
+}
+
+/* SHOW OVERLAY */
+.single-blog-post:hover .overlay{
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* product section End */

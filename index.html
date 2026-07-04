@@ -1,0 +1,1208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+
+    <!-- responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- For IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- master stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/All.css" />
+
+    <!-- Responsive stylesheet -->
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-touch-icon.png"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/favicon/favicon-32x32.png"
+      sizes="32x32"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/favicon/favicon-16x16.png"sizes="16x16"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+
+
+
+
+  <body>
+    <div class="boxed_wrapper">
+      <div class="preloader"></div>
+
+
+<!-- NAV BAR START -->
+<header class="main-header header-style2 stricky">
+
+  <div class="inner-container clearfix">
+
+    <!-- LOGO -->
+    <div class="logo-box-style2 float-left">
+      <a href="index.html">
+        <img src="img-1/home/logo-0.png" alt="Awesome Logo" />
+      </a>
+    </div>
+
+    <!-- MENU AREA -->
+    <div class="main-menu-box float-right">
+
+      <nav class="main-menu style2 clearfix">
+
+        <!-- MOBILE BUTTON -->
+        <div class="navbar-header clearfix">
+          <button type="button" class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <!-- NAV LINKS -->
+        <div class="navbar-collapse collapse clearfix">
+
+          <ul class="navigation clearfix">
+
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+
+            <li class="dropdown">
+              <a href="#">Products</a>
+              <ul>
+
+                <li class="dropdown">
+                  <a href="#">CP bath fittings</a>
+                  <ul>
+                    <li><a href="keto.html">Keto collection</a></li>
+                    <li><a href="pisa.html">Pisa collection</a></li>
+
+                   <li><a href="Oslo.html">Oslo collection</a></li>
+                    <li><a href="cali.html">Cali collection</a></li>
+                    <li><a href="hansa.html">Hansa collection</a></li>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#">Sanitaryware</a>
+                  <ul>
+                    <li><a href="water-closet.html">Water closets</a></li>
+                    
+                     <li><a href="wash-basin.html">Wash Basin</a></li> 
+                     <li><a href="Table-top-basin.html">Table Top Basin</a></li> 
+                  </ul>
+                </li>
+
+                <li><a href="shower.html">Overhead shower</a></li>
+
+                      <li><a href="Sink-ss.html">Stainless Steel Sink </a></li>
+                      <li><a href="shower-chanel.html">Shower Channel </a></li>
+                      <li><a href="Sensor-Tapl.html">Sensor Tap</a></li>
+                      <li><a href="Health-faucet.html">Health Faucet</a></li>
+                      <li><a href="Bathroom-Acces.html">Bathroom Accessories</a></li>
+                      <li>
+                        <a href="Grabe-bar.html">Grab Bar</a>
+                      </li>
+
+                      <li>
+                        <a href="Accessories.html">Accessories</a>
+                      </li>
+
+
+              </ul>
+            </li>
+
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+
+          </ul>
+
+        </div>
+
+      </nav>
+
+      <!-- LANGUAGE BUTTON -->
+      <div class="mainmenu-right style2">
+
+        <button id="langToggle" class="language-btn">
+          <span id="enText" class="active-lang">EN</span>
+          <span class="sep">/</span>
+          <span id="esText">ES</span>
+          <span id="arrow" class="arrow">➜</span>
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<!-- Google Translate-->
+<div id="google_translate_element" 
+style="display:none;"></div>
+
+<!-- STYLE -->
+
+
+<!-- SCRIPT -->
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    { pageLanguage: 'en' },
+    'google_translate_element'
+  );
+}
+
+let currentLang = "en";
+
+document.getElementById("langToggle").addEventListener("click", function () {
+
+  let newLang = currentLang === "en" ? "es" : "en";
+
+  let interval = setInterval(function () {
+
+    let select = document.querySelector(".goog-te-combo");
+
+    if (select) {
+
+      select.value = newLang;
+      select.dispatchEvent(new Event("change"));
+
+      currentLang = newLang;
+
+      // UI update
+      let enText = document.getElementById("enText");
+      let esText = document.getElementById("esText");
+      let arrow = document.getElementById("arrow");
+
+      if (currentLang === "en") {
+        enText.classList.add("active-lang");
+        esText.classList.remove("active-lang");
+        arrow.style.transform = "rotate(0deg)";
+      } else {
+        esText.classList.add("active-lang");
+        enText.classList.remove("active-lang");
+        arrow.style.transform = "rotate(180deg)";
+      }
+
+      clearInterval(interval);
+    }
+
+  }, 300);
+
+});
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<!-- End nav bar -->
+
+
+
+
+      <!--Banar section start Slider-->
+
+      <section class="main-slider">
+        <div
+          class="rev_slider_wrapper fullwidthbanner-container"
+          id="rev_slider_one_wrapper"
+          data-source="gallery"
+        >
+          <div
+            class="rev_slider fullwidthabanner"
+            id="rev_slider_one"
+            data-version="5.4.1"
+          >
+            <ul>
+              <!--slide 1-->
+
+              <li
+                data-description="Slide Description"
+                data-transition="slotzoom-horizontal"
+                data-slotamount="default"
+                data-masterspeed="1800"
+                data-title="Smart Flow"
+              >
+                <!-- MAIN IMAGE -->
+                <img
+                  src="img-1/home/home-banar-001.jpg"
+                  alt=""
+                  class="rev-slidebg"
+                  data-bgfit="cover"
+                  data-bgposition="center center"
+                  data-bgrepeat="no-repeat"
+                  data-bgparallax="10"
+                  data-no-retina
+                />
+                
+
+                <!-- TITLE -->
+                <div
+                  class="tp-caption"
+                  data-width="['800','800','700','500']"
+                  data-hoffset="['40','30','20','15']"
+                  data-voffset="['-180','-120','-120','-100']"
+                  data-x="['left','left','left','left']"
+                  data-y="['middle','middle','middle','middle']"
+                  data-frames='[
+                        {
+                        "delay":400,
+                        "speed":1800,
+                        "from":"x:[-100%];opacity:0;",
+                        "to":"o:1;x:0;",
+                        "ease":"Power4.easeOut"
+                        }]'
+                 >
+                  <div class="slide-content left-slide">
+                    <div class="big-title">Where <br>elegance meets <br>performance</div>
+                  </div>
+                </div>
+
+                <!-- TEXT -->
+                <div
+                  class="tp-caption"
+                  data-width="['700','700','650','500']"
+                  data-hoffset="['40','30','20','15']"
+                  data-voffset="['-55','0','-10','-20']"
+                  data-x="['left','left','left','left']"
+                  data-y="['middle','middle','middle','middle']"
+                  data-frames='[
+                        {
+                        "delay":900,
+                        "speed":1500,
+                        "from":"y:[40px];opacity:0;",
+                        "to":"o:1;",
+                        "ease":"Power3.easeOut"
+                        }]'
+                >
+                  <div class="slide-content left-slide">
+                   
+                  </div>
+                </div>
+
+                <!-- BUTTON
+                 
+                <div
+                  class="tp-caption"
+                  data-width="['700','700','650','500']"
+                  data-hoffset="['40','30','20','15']"
+                  data-voffset="['55','105','105','85']"
+                  data-x="['left','left','left','left']"
+                  data-y="['middle','middle','middle','middle']"
+                  data-frames='[
+                        {
+                        "delay":1300,
+                        "speed":1400,
+                        "from":"y:[60px];opacity:0;sX:0.8;sY:0.8;",
+                        "to":"o:1;sX:1;sY:1;",
+                        "ease":"Back.easeOut"
+                        }]'
+                >
+                  <div class="slide-content left-slide">
+                    <div class="btn-box">
+                      <a class="btn-one" href="#">
+                        Explore more
+                        <span class="flaticon-next"></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                     -->
+              </li>
+
+              <!-- slide 2 -->
+
+              <li
+                data-description="Slide Description"
+                data-transition="slotzoom-horizontal"
+                data-slotamount="default"
+                data-masterspeed="1800"
+                data-title="Flow Luxury"
+              >
+                <img
+                  src="img-1/home/Home-banar-05.jpg"
+                  alt=""
+                  class="rev-slidebg"
+                  data-bgfit="cover"
+                  data-bgposition="center center"
+                  data-bgrepeat="no-repeat"
+                  data-bgparallax="10"
+                />
+
+                <!-- TITLE -->
+                <div
+                  class="tp-caption"
+                  data-width="['800','800','700','500']"
+                  data-hoffset="['40','30','20','15']"
+                  data-voffset="['-180','-120','-120','-100']"
+                  data-x="['left','left','left','left']"
+                  data-y="['middle','middle','middle','middle']"
+                  data-frames='[
+                        {
+                        "delay":400,
+                        "speed":1800,
+                        "from":"x:[-100%];opacity:0;",
+                        "to":"o:1;x:0;",
+                        "ease":"Power4.easeOut"
+                        }]'
+                >
+                  <div class="slide-content left-slide">
+                    <div class="big-title">Contemporary <br>styling with<br> lasting durability</div>
+                  </div>
+                </div>
+
+                <!-- TEXT -->
+                <div
+                  class="tp-caption"
+                  data-width="['700','700','650','500']"
+                  data-hoffset="['40','30','20','15']"
+                  data-voffset="['-55','0','-10','-20']"
+                  data-x="['left','left','left','left']"
+                  data-y="['middle','middle','middle','middle']"
+                  data-frames='[
+                        {
+                        "delay":900,
+                        "speed":1500,
+                        "from":"y:[40px];opacity:0;",
+                        "to":"o:1;",
+                        "ease":"Power3.easeOut"
+                        }]'
+                >
+                 
+                </div>
+
+                <!-- BUTTON -->
+                
+              </li>
+
+              <!--slide 3 -->
+
+              <li
+                data-description="Slide Description"
+                data-transition="slotzoom-horizontal"
+                data-slotamount="default"
+                data-masterspeed="1800"
+                data-title="Premium Shine"
+              >
+                <img
+                  src="img-1/home/home-banar-002.jpg"
+                  alt=""
+                  class="rev-slidebg"
+                  data-bgfit="cover"
+                  data-bgposition="center center"
+                  data-bgrepeat="no-repeat"
+                  data-bgparallax="10"
+                />
+
+                <!-- TITLE -->
+                <div
+                  class="tp-caption"
+                  data-width="['800','800','700','500']"
+                  data-hoffset="['40','30','20','15']"
+                  data-voffset="['-180','-120','-120','-100']"
+                  data-x="['left','left','left','left']"
+                  data-y="['middle','middle','middle','middle']"
+                  data-frames='[
+                        {
+                        "delay":400,
+                        "speed":1800,
+                        "from":"x:[-100%];opacity:0;",
+                        "to":"o:1;x:0;",
+                        "ease":"Power4.easeOut"
+                        }]'
+                >
+                  <div class="slide-content left-slide">
+                    <div class="big-title">Beauty <br>built around <br> functionality</div>
+                  </div>
+                </div>
+
+                <!-- TEXT -->
+                <div
+                  class="tp-caption"
+                  data-width="['700','700','650','500']"
+                  data-hoffset="['40','30','20','15']"
+                  data-voffset="['-55','0','-10','-20']"
+                  data-x="['left','left','left','left']"
+                  data-y="['middle','middle','middle','middle']"
+                  data-frames='[
+                        {
+                        "delay":900,
+                        "speed":1500,
+                        "from":"y:[40px];opacity:0;",
+                        "to":"o:1;",
+                        "ease":"Power3.easeOut"
+                        }]'
+                >
+                 
+                </div>
+
+                <!-- BUTTON -->
+
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
+
+        <!--End Featured Area-->
+
+
+
+      <!--Start about area-->
+      <section class="about-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-5 col-lg-5">
+              <div class="about-image-box">
+                <div class="inner-box">
+                  <img src="img-1/home/About-home-1.jpg" alt="Awesome Image" />
+                  <div class="overlay">
+                    <div class="box">
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="text-box">
+                  <p>Premium Water Solutions With Modern Design</p>
+                  <!--
+                  <h3>
+                    Stylish Faucet Innovations <span>For Every Space</span>
+                  </h3>
+                  -->
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-7 col-lg-7">
+              <div class="about-text">
+                <div class="sec-title">
+                  <p>About Nufera</p>
+                  <div class="title">
+                    Creating Luxury<br />
+                    Flow<span style="color: #8e0a0a;"> For Modern Living</span>
+                  </div>
+                </div>
+                <div class="inner-content">
+                  <div class="text">
+                    <p>
+                      Nufera is a modern and progressive brand specializing in premium bathroom solutions, offering an extensive range of CP bathroom fittings, sanitary ware, overhead showers, and bathroom accessories. Driven by a passion for innovation, quality, and design excellence, the company creates products that seamlessly blend aesthetics with functionality to enhance contemporary living spaces.
+
+                    </p>
+
+                    <p>
+                     Manufactured in a state-of-the-art facility using high-grade raw materials and advanced production technologies, every product by Nufera is crafted to meet global quality standards and deliver long-lasting performance. The brand is committed to precision engineering, superior finishing, and meticulous attention to detail, ensuring elegance, durability, and reliability across its product range.
+                    </p>
+
+                    <p>
+                      With a strong focus on modern design sensibilities, Nufera offers thoughtfully curated collections featuring premium finishes, refined styling, and user-centric functionality. Each product is designed to bring sophistication, comfort, and convenience to residential, commercial, and hospitality spaces alike...
+                    </p>
+
+                  </div>
+
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--End about Area-->
+
+
+
+
+
+      <!--Start Working Area counter-->
+      <section
+        class="working-area"
+        style="background-image: url(images/parallax-background/working-bg.jpg)"
+      >
+        <div class="container">
+          <div
+            class="sec-title with-text max-width text-center wow fadeInDown"
+            data-wow-delay="100ms"
+            data-wow-duration="1200ms"
+          >
+            <p></p>
+            <div class="title clr-white">Our manufacturing <span>Excellence</span></div>
+            <p class="bottom-text">
+              Sustainability and responsible manufacturing remain integral to the company’s philosophy. By adhering to environmental norms and adopting eco-conscious manufacturing practices, Nufera strives to contribute towards a cleaner and more sustainable future while maintaining uncompromising quality standards.
+            </p>
+          </div>
+
+          <div class="row">
+            <!--Start Single Working Box-->
+            <div class="col-xl-4 col-lg-4">
+              <div
+                class="single-working-box wow fadeInDown"
+                data-wow-delay="0ms"
+              >
+                <div class="img-holder">
+                  <div class="inner">
+                    <img src="img-1/home/counter-11.jpg" alt="Awesome Image" />
+                    <div class="overlay-style-one"></div>
+                  </div>
+                </div>
+                <div class="text-holder">
+                  <div class="plus-icon-box">
+                    <span class="icon-plus"></span>
+                  </div>
+                  <div class="outer-box">
+                    <div class="icon">
+                      <div class="inner">
+                        <div class="box">
+                         <!-- <span class="icon-architecture-and-city1"></span>-->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text">
+                     <span class="thin-text">Over 50 Years Of</span><span class="bold-text"> Legacy</span>
+                      <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Cupiditate, perferendis.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--End Single Working Box-->
+
+            <!--Start Single Working Box-->
+            <div class="col-xl-4 col-lg-4">
+              <div
+                class="single-working-box wow fadeInDown"
+                data-wow-delay="400ms"
+              >
+                <div class="img-holder">
+                  <div class="inner">
+                    <img src="img-1/home/counter-3.jpg" alt="Awesome Image" />
+                    <div class="overlay-style-one"></div>
+                  </div>
+                </div>
+                <div class="text-holder">
+                  <div class="plus-icon-box">
+                    <span class="icon-plus"></span>
+                  </div>
+                  <div class="outer-box">
+                    <div class="icon">
+                      <div class="inner">
+                        <div class="box">
+                         <!--
+                           <span class="icon-shop"></span>-->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text">
+
+                       <span class="thin-text">Technologically </span><span class="bold-text"> Advanced Products</span>
+
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Tempore, dolores?
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--End Single Working Box-->
+
+
+            <!--Start Single Working Box-->
+            <div class="col-xl-4 col-lg-4">
+              <div
+                class="single-working-box wow fadeInDown"
+                data-wow-delay="800ms"
+              >
+                <div class="img-holder">
+                  <div class="inner">
+                    <img src="img-1/home/factory-1.jpg" alt="Awesome Image" />
+                    <div class="overlay-style-one"></div>
+                  </div>
+                </div>
+                <div class="text-holder">
+                  <div class="plus-icon-box">
+                    <span class="icon-plus"></span>
+                  </div>
+                  <div class="outer-box">
+                    <div class="icon">
+                      <div class="inner">
+                        <div class="box">
+                          <!--
+                          <span class="icon-company"></span>-->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="text">
+
+                      <span class="thin-text">State Of The Art </span><span class="bold-text"> Infrastructure</span>
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quidem, pariatur.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--End Single Working Box-->
+          </div>
+        </div>
+      </section>
+
+      <style>
+
+  .thin-text{
+  font-weight: 500;
+  font-size: 25px;
+  color: black;
+}
+
+.bold-text{
+ font-weight: 400;
+  font-size: 22px;
+  color: black;
+}
+      </style>
+      <!--End Working Area-->
+
+
+
+<!-- STATIC SECTION START -->
+<section class="parallax-section">
+
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="img-1/home/static-vedio.mp4" type="video/mp4">
+  </video>
+
+  <div class="overlay"></div>
+
+  <div class="content">
+    <div class="hero-box">
+      <h1>"Water is the driving force of all nature."</h1>
+      <div class="name">— Leonardo da Vinci</div>
+    </div>
+  </div>
+
+</section>
+<!-- STATIC SECTION END -->
+
+<style>
+  .parallax-section{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bg-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.1);
+    z-index: -1;
+}
+
+.content{
+    position: relative;
+    z-index: 1;
+}
+</style>
+
+
+
+
+
+
+      <!--Start latest blog area-->
+      <section class="latest-blog-area">
+        <div class="container inner-content">
+          <div class="sec-title text-center">
+            <p></p>
+            <div class="title">A <span> fusion</span> of <br>exclusivity & <span> minimalism</span></div>
+            <p class="bottom-text">
+             At Nufera, every product is crafted with precision, combining global quality standards with contemporary <br>aesthetics to create bathroom solutions that inspire elegance and performance...
+            </p>
+          </div>
+          <div class="row">
+
+
+
+            <!--Start single blog post-->
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+              <div
+                class="single-blog-post wow fadeInLeft"
+                data-wow-delay="0ms"
+                data-wow-duration="1500ms"
+              >
+                <div class="img-holder">
+                  <img src="img-1/home/working-01.jpg" alt="Awesome Image" />
+                  <div class="overlay-style-two"></div>
+                  <div class="overlay">
+                    <div class="box">
+                      <div class="link-icon">
+                        <a href="#"><span class="flaticon-zoom"></span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-holder">
+                  <h3 class="blog-title">
+                    <a href="#">CP Bathroom Fittings</a>
+                  </h3>
+                  <div class="text">
+                    <p>
+                      Crafted with precision and finished in premium chrome plating, these faucets add elegance and durability to modern bathrooms. Designed for smooth operation and long-lasting performance.
+                    </p>
+                    <a class="btn-two" href="product-1.html"
+                      >Read More<span class="flaticon-next"></span
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--End single blog post-->
+
+            
+            
+            <!--Start single blog post-->
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+              <div
+                class="single-blog-post wow fadeInLeft"
+                data-wow-delay="400ms"
+                data-wow-duration="1500ms">
+                <div class="img-holder">
+                  <img src="img-1/home/working-3.jpg" alt="Awesome Image" />
+                  <div class="overlay-style-two"></div>
+                  <div class="overlay">
+                    <div class="box">
+                      <div class="link-icon">
+                        <a href="#"><span class="flaticon-zoom"></span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-holder">
+                  <h3 class="blog-title"><a href="#">CP Bathroom Fittings</a></h3>
+                  <div class="text">
+                    <p>
+                         Combining contemporary aesthetics with superior functionality, our CP fittings deliver effortless water flow and exceptional reliability for everyday use.
+                    </p>
+                    <a class="btn-two" href="product-1.html"
+                      >Read More<span class="flaticon-next"></span
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--End single blog post-->
+
+
+
+
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+              <div
+                class="single-blog-post wow fadeInLeft"
+                data-wow-delay="200ms"
+                data-wow-duration="1500ms"
+              >
+                <div class="img-holder">
+                  <img src="img-1/home/working-003.jpg" alt="Awesome Image" />
+                  <div class="overlay-style-two"></div>
+                  <div class="overlay">
+                    <div class="box">
+                      <div class="link-icon">
+                        <a href="#"><span class="flaticon-zoom"></span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-holder">
+                  <h3 class="blog-title"><a href="#">Sanitaryware</a></h3>
+                  <div class="text">
+                    <p>
+                      Designed with clean lines and refined aesthetics, our sanitary ware collection enhances bathroom spaces with elegance, comfort, and superior functionality.
+                    </p>
+                    <a class="btn-two" href="closet-drawing.html"
+                      >Read More<span class="flaticon-next"></span
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>    
+
+            <!--End single blog post-->
+
+
+
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+              <div
+                class="single-blog-post wow fadeInLeft"
+                data-wow-delay="0ms"
+                data-wow-duration="1500ms"
+              >
+                <div class="img-holder">
+                  <img src="img-1/home/wall-hung-4.jpg" alt="Awesome Image" />
+                  <div class="overlay-style-two"></div>
+                  <div class="overlay">
+                    <div class="box">
+                      <div class="link-icon">
+                        <a href="#"><span class="flaticon-zoom"></span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-holder">
+                  <h3 class="blog-title">
+                    <a href="#">Sanitaryware</a>
+                  </h3>
+                  <div class="text">
+                    <p>
+                      
+                     Crafted from high-quality ceramic, these wash basins and water closets offer exceptional durability, easy maintenance, and long-lasting performance.
+                    </p>
+                    <a class="btn-two" href="Wash-closet.html"
+                      >Read More<span class="flaticon-next"></span
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+              <div
+                class="single-blog-post wow fadeInLeft"
+                data-wow-delay="0ms"
+                data-wow-duration="1500ms"
+              >
+                <div class="img-holder">
+                  <img src="img-1/home/shower-011.jpg" alt="Awesome Image" />
+                  <div class="overlay-style-two"></div>
+                  <div class="overlay">
+                    <div class="box">
+                      <div class="link-icon">
+                        <a href="#"><span class="flaticon-zoom"></span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-holder">
+                  <h3 class="blog-title">
+                    <a href="#">Overhead shower</a>
+                  </h3>
+                  <div class="text">
+                    <p>
+                    Built to meet the demands of modern living, these sanitary ware products offer reliable performance, effortless cleaning, and enduring elegance.
+                    </p>
+                    <a class="btn-two" href="shower.html"
+                      >Read More<span class="flaticon-next"></span
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+              <div
+                class="single-blog-post wow fadeInLeft"
+                data-wow-delay="0ms"
+                data-wow-duration="1500ms"
+              >
+                <div class="img-holder">
+                  <img src="img-1/home/Accessories.jpg" alt="Awesome Image" />
+                  <div class="overlay-style-two"></div>
+                  <div class="overlay">
+                    <div class="box">
+                      <div class="link-icon">
+                        <a href="#"><span class="flaticon-zoom"></span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-holder">
+                  <h3 class="blog-title">
+                    <a href="#">Accessories</a>
+                  </h3>
+                  <div class="text">
+                    <p>
+                      Featuring sophisticated forms and premium craftsmanship, this collection adds a touch of luxury while ensuring everyday convenience and comfort. 
+                    </p>
+                    <a class="btn-two" href="Drawing.html"
+                      >Read More<span class="flaticon-next"></span
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!--End latest blog area-->
+
+
+
+      <!--Start footer area-->
+      <footer class="footer-area">
+        <div
+          class="footer-shape-bg wow slideInRight"
+          data-wow-delay="300ms"
+          data-wow-duration="2500ms"
+        ></div>
+        <div class="container">
+          <div class="row">
+            <!--Start single footer widget-->
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+              <div class="single-footer-widget marbtm50">
+                <div class="contact-info-box">
+                  <ul>
+                    <li>
+                      <h6>Address</h6>
+                      <p>
+                        Flat 20, New Delhi<br />
+                        India
+                      </p>
+                    </li>
+                    <li>
+                      <h6>Phone</h6>
+                      <p>
+                        +91 8823115865<br />
+                        <span>Mon - Sat:</span> 9.00am to 6.00pm
+                      </p>
+                    </li>
+                    <li>
+                      <h6>Email</h6>
+                      <p>Info@gmail.com<br />Feraindustries@gnaim.com</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!--End single footer widget-->
+
+            <!--Start single footer widget-->
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+              <div class="single-footer-widget marbtm50">
+                <div class="title">
+                  <h3>Quick links</h3>
+                </div>
+
+
+                <div class="services-links">
+                  <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Contact us</a></li>
+                  </ul>
+                </div>
+
+                
+              </div>
+            </div>
+            <!--End single footer widget-->
+
+            <!--Start single footer widget-->
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+              <div class="single-footer-widget pdbtm50">
+                <div class="title">
+                  <h3>Our Products</h3>
+                </div>
+
+                <div class="services-links">
+                  <ul>
+                    <li>
+                      <a href="#"> CP bath fittings  </a>
+                    </li>
+
+                    <li>
+                      <a href="#"> Sanitary ware</a>
+                    </li>
+
+                    <li>
+                      <a href="#"> Stainless Steel Sink </a>
+                    </li>
+
+                    <li>
+                      <a href="#"> Overhead showers </a>
+                    </li>
+
+                    <li>
+                      <a href="#"> Accessories </a>
+                    </li>
+
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!--End single footer widget-->
+
+            <!--Start single footer widget-->
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+              <div class="single-footer-widget">
+                <div class="brochures-carousel-box owl-carousel owl-theme">
+                  <!--Start Single Item-->
+                  <div class="single-item">
+                    <div class="img-holder">
+                      <img src="img-1/home/footer-1.jpg" alt="Awesome Image" />
+                    </div>
+                    <div class="title-holder">
+                      <h3>
+                        Our new Design<br />
+                        Brochure
+                      </h3>
+                      <a class="btn-two" href="#"
+                        >Download Now<span class="flaticon-next"></span
+                      ></a>
+                    </div>
+                  </div>
+                  <!--End Single Item-->
+
+                  <!--Start Single Item-->
+                  <div class="single-item">
+                    <div class="img-holder">
+                      <img src="img-1/home/footer-1.jpg" alt="Awesome Image" />
+                    </div>
+                    <div class="title-holder">
+                      <h3>
+                        Our New Design<br />
+                        Brochure
+                      </h3>
+                      <a class="btn-two" href="#"
+                        >Download Now<span class="flaticon-next"></span
+                      ></a>
+                    </div>
+                  </div>
+                  <!--End Single Item-->
+
+                  <!--Start Single Item-->
+                  <div class="single-item">
+                    <div class="img-holder">
+                      <img src="img-1/home/footer-1.jpg" alt="Awesome Image" />
+                    </div>
+                    <div class="title-holder">
+                      <h3>
+                        Our New Design<br />
+                        Brochure
+                      </h3>
+                      <a class="btn-two" href="#"
+                        >Download Now<span class="flaticon-next"></span
+                      ></a>
+                    </div>
+                  </div>
+                  <!--End Single Item-->
+                </div>
+              </div>
+            </div>
+            <!--End single footer widget-->
+          </div>
+        </div>
+      </footer>
+      <!--End footer area-->
+
+        
+      <!--Start footer bottom area-->
+      <section class="footer-bottom-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+              <div class="footer-bottom-content text-center">
+                <div class="copyright-text">
+                  <p>
+                    © 2026 All Rights Reserved | Designed By
+                    <a href="#">Preface Communications</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--End footer bottom area-->
+    </div>
+
+
+
+
+<!-- top to bottom -->
+
+<a href="https://wa.me/911234567890"
+   class="fera-whatsapp-btn"target="_blank"
+   aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<button class="fera-scroll-top-btn"
+        id="feraScrollTop"type="button"
+        aria-label="Scroll To Top"><i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- top to bottom End -->
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!--index Slide link-->
+    <script src="plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="js/main-slider-script.js"></script>
+
+    <!-- thm custom script -->
+    <script src="js/custom.js"></script>
+    <script src="js/All.js"></script>
+
+
+  </body>
+
+</html>
+
+
