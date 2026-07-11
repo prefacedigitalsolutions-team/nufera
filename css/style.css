@@ -13018,11 +13018,9 @@ li .single-footer-contact-info .text p span{
 /* BOX */
 .product-collection-box{
   flex: 1;
-  max-width: 600px;
-  padding: 35px;
-  border-radius: 4px;
-  background-color: #edfdfd;
-  border: 1px solid #c8f5f5;
+  max-width: 1000px;
+  padding: 15px;
+  border-radius: 5px;
 }
 
 /* TEXT */
