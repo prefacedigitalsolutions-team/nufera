@@ -3,35 +3,22 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i');
 
-
-@import url(animate.css);
-@import url(bootstrap.min.css);
+@import url('animate.css');
+@import url('bootstrap.min.css');
 @import url('bootstrap-select.min.css');
 @import url('custom-animate.css');
-@import url(font-awesome.min.css);
 @import url('icomoon.css');
-@import url('imp.css');
-@import url(jquery.bootstrap-touchspin.css);
-@import url('jquery.fancybox.min.css');
-@import url(owl.css);
-@import url(owl.theme.default.css);
+@import url('owl.css');
+@import url('owl.theme.default.css');
 
-@import url(../fonts/flaticon/flaticon.css);
-/*** Price filter***/
-@import url(../assets/price-filter/nouislider.css);
-@import url(../assets/price-filter/nouislider.pips.css);
-/*** Time picker css ***/
-@import url(../assets/timepicker/timePicker.css);
-/*** jquery ui css ***/
-@import url(../assets/jquery-ui-1.11.4/jquery-ui.css);
-/*** Revolution slider ***/
-@import url(../plugins/revolution/css/settings.css);
-@import url(../plugins/revolution/css/layers.css);
-@import url(../plugins/revolution/css/navigation.css);
-/*** Language Switcher ***/
-@import url(../assets/language-switcher/polyglot-language-switcher.css);
-@import url(../plugins/energy-icon/style.css);
+@import url('../fonts/flaticon/flaticon.css');
 
+/*** Revolution Slider ***/
+@import url('../plugins/revolution/css/settings.css');
+@import url('../plugins/revolution/css/layers.css');
+@import url('../plugins/revolution/css/navigation.css');
+
+@import url('../plugins/energy-icon/style.css');
 
 
 
@@ -12789,213 +12776,6 @@ li .single-footer-contact-info .text p span{
 }
 
 
-
-/*** 
-=============================================
-    Coming Soon Content Area style
-=============================================
-***/
-.coming-soon-content-area {
-    position: relative;
-    display: block;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    padding: 110px 0 420px;
-    z-index: 1;
-}
-.coming-soon-content{
-    position: relative;
-    display: block;
-}
-.coming-soon-content .logo-box{
-    position: relative;
-    display: block;
-    padding-bottom: 50px;    
-}
-.coming-soon-content .logo-box a{
-    display: inline-block;
-}
-.coming-soon-content .title{
-    color: #ffffff;
-    font-size: 60px;
-    line-height: 70px;
-    font-weight: 700;
-    font-family: 'Poppins', sans-serif;
-}
-
-
-
-/*** 
-=============================================
-    Timer Area style
-=============================================
-***/
-.timer-area{
-    position: relative;
-    display: block;
-    z-index: 1;
-}
-.timer-area:before{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(../images/pattern/timer-area-bg.jpg);
-    background-repeat: repeat;
-    background-size: auto;
-    background-position: left;
-    content: "";
-    z-index: -1;
-}
-.timer-box {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    background: #e9212e;
-    max-width: 770px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 74px 110px 72px;
-    margin-top: -320px;
-    z-index: 3;
-}
-.timer-box h1{
-    color: #ffffff;
-    font-size: 48px;
-    line-height: 58px;
-    font-weight: 700;
-    text-transform: capitalize;
-    margin: 0 0 47px;
-}
-.countdown-timer {}
-.countdown-timer .default-coundown {}
-.countdown-timer .default-coundown .box {
-    overflow: hidden;
-}
-.countdown-timer li {
-    position: relative;
-    display: inline-block;
-    float: none;
-    padding: 0;
-    text-align: center;
-    margin: 0 23px;
-}
-.countdown-timer li:first-child{
-    margin-left: 0;
-}
-.countdown-timer li:last-child{
-    margin-right: 0;
-}
-
-.countdown-timer li span.days,
-.countdown-timer li span.hours,
-.countdown-timer li span.minutes,
-.countdown-timer li span.seconds {
-    position: relative;
-    display: block;
-    background: #ffffff;
-    width: 100px;
-    height: 100px;
-    color: #27282c;
-    font-size: 48px;
-    line-height: 100px;
-    font-weight: 500;
-    text-align: center;
-    border-radius: 0px;
-    font-family: 'Rubik', sans-serif;
-}
-.countdown-timer li span.hours{}
-.countdown-timer li span.minutes{}
-.countdown-timer li span.seconds{}
-
-.countdown-timer li span.timeRef {
-    color: #ffffff;
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: 600;
-    text-transform: capitalize;
-    margin-top: 17px;
-    display: block;
-    font-family: 'Poppins', sans-serif;
-}
-.countdown-timer li span.timeRef.clr-1{}
-.countdown-timer li span.timeRef.clr-2{}
-.countdown-timer li span.timeRef.clr-3{}
-
-.timer-box .subscribe-box{
-    position: relative;
-    display: block;
-    margin-top: 39px;
-}
-.timer-box .subscribe-box .subscribe-form {
-    position: relative;
-    display: block;
-    width: 100%;
-}
-.timer-box .subscribe-box .subscribe-form input[type="email"]{
-    position: relative;
-    display: block;
-    background: #ffffff;
-    border: 1px solid #ffffff;
-    color: #828282;
-    font-size: 15px;
-    font-weight: 400;
-    width: 100%;
-    height: 60px;
-    margin-bottom: 0px;
-    padding: 0 30px;
-    padding-right: 185px;
-    transition: all 500ms ease;
-}
-.timer-box .subscribe-box .subscribe-form input::-webkit-input-placeholder {
-    color: #e9212e;
-}
-.timer-box .subscribe-box .subscribe-form input:-moz-placeholder {
-    color: #e9212e;
-}
-.timer-box .subscribe-box .subscribe-form input::-moz-placeholder {
-    color: #e9212e;
-}
-.timer-box .subscribe-box .subscribe-form input:-ms-input-placeholder {
-    color: #e9212e;
-}
-.timer-box .subscribe-box .subscribe-form button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: #27282c;
-    background: #ffffff;
-    border-left: 1px solid #ededed;
-    padding: 0;
-    width: 170px;
-}
-.timer-box .subscribe-box .subscribe-form input[type="email"]:focus {
-    color: #222222;
-    border: 1px solid #191a1c;
-    background: #ffffff;
-}
-.timer-box .subscribe-box .subscribe-form input[type="email"]:focus + button, 
-.timer-box .subscribe-box .subscribe-form button:hover {
-    background: #191a1c;
-    color: #fff;
-}
-
-.timer-box .subscribe-box .text{
-    position: relative;
-    display: block;
-    padding-top: 14px;
-}
-.timer-box .subscribe-box .text p{
-    color: #ffffff;
-    font-size: 15px;
-    margin: 0;
-}
-.timer-box .subscribe-box .text p span{
-    font-weight: 600;
-}
 
 
 

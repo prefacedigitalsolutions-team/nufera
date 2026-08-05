@@ -93,6 +93,24 @@
 }
 
 
+
+
+/* logo section start responsive*/
+@media (max-width: 767px) {
+    .logo-box-style2 {
+        float: none;
+        width: 100px;
+        height: auto;
+        margin: 0;
+        padding: 1px 0;
+    }
+}
+
+
+
+
+
+
 /* bottom to top section start */
 
 .fera-whatsapp-btn,

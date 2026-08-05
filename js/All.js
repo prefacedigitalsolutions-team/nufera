@@ -1,119 +1,195 @@
-document.addEventListener("DOMContentLoaded", function(){
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* =========================================
+       SCROLL TOP + WHATSAPP BUTTON
+    ========================================= */
 
     const feraTopBtn = document.getElementById("feraScrollTop");
     const feraWhatsapp = document.querySelector(".fera-whatsapp-btn");
 
-    if(!feraTopBtn) return;
+    if (feraTopBtn) {
 
-    function feraToggleButtons(){
+        function feraToggleButtons() {
 
-        const scrollPosition =
-            window.pageYOffset ||
-            document.documentElement.scrollTop ||
-            document.body.scrollTop;
+            const scrollPosition =
+                window.pageYOffset ||
+                document.documentElement.scrollTop ||
+                document.body.scrollTop ||
+                0;
 
-        if(scrollPosition > 100){
+            if (scrollPosition > 100) {
 
-            feraTopBtn.classList.add("fera-show");
+                feraTopBtn.classList.add("fera-show");
 
-            if(feraWhatsapp){
-                feraWhatsapp.classList.add("fera-show");
-            }
+                if (feraWhatsapp) {
+                    feraWhatsapp.classList.add("fera-show");
+                }
 
-        }else{
+            } else {
 
-            feraTopBtn.classList.remove("fera-show");
+                feraTopBtn.classList.remove("fera-show");
 
-            if(feraWhatsapp){
-                feraWhatsapp.classList.remove("fera-show");
+                if (feraWhatsapp) {
+                    feraWhatsapp.classList.remove("fera-show");
+                }
             }
         }
+
+        window.addEventListener("scroll", feraToggleButtons);
+
+        feraToggleButtons();
+
+
+        /* Scroll Top Click */
+
+        feraTopBtn.addEventListener("click", function (e) {
+
+            e.preventDefault();
+
+            const startPosition =
+                window.pageYOffset ||
+                document.documentElement.scrollTop ||
+                document.body.scrollTop ||
+                0;
+
+            const duration = 500;
+            const startTime = performance.now();
+
+
+            function animateScroll(currentTime) {
+
+                const elapsed = currentTime - startTime;
+
+                const progress = Math.min(
+                    elapsed / duration,
+                    1
+                );
+
+                const easeOutCubic =
+                    1 - Math.pow(1 - progress, 3);
+
+                const newPosition =
+                    startPosition * (1 - easeOutCubic);
+
+
+                window.scrollTo(0, newPosition);
+
+                document.documentElement.scrollTop =
+                    newPosition;
+
+                document.body.scrollTop =
+                    newPosition;
+
+
+                if (progress < 1) {
+                    requestAnimationFrame(animateScroll);
+                }
+            }
+
+            requestAnimationFrame(animateScroll);
+
+        });
     }
 
-    window.addEventListener("scroll", feraToggleButtons);
 
-    feraToggleButtons();
+    /* =========================================
+       GSAP ANIMATION
+    ========================================= */
 
-    feraTopBtn.addEventListener("click", function(e){
+    // Check GSAP
+    if (typeof gsap === "undefined") {
+        console.warn("GSAP is not loaded.");
+        return;
+    }
 
-        e.preventDefault();
 
-        const startPosition =
-            window.pageYOffset ||
-            document.documentElement.scrollTop ||
-            document.body.scrollTop;
+    /* Register ScrollTrigger only if available */
 
-        const duration = 500;
-        const startTime = performance.now();
+    if (typeof ScrollTrigger !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger);
+    }
 
-        function animateScroll(currentTime){
 
-            const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / duration, 1);
+    /* =========================================
+       HEALTH FAUCET ANIMATION
+    ========================================= */
 
-            const easeOutCubic =
-                1 - Math.pow(1 - progress, 3);
+    const healthFaucetBoxes =
+        document.querySelectorAll(".helthfaucet-box");
 
-            const newPosition =
-                startPosition * (1 - easeOutCubic);
 
-            window.scrollTo(0, newPosition);
+    if (
+        healthFaucetBoxes.length > 0 &&
+        typeof ScrollTrigger !== "undefined"
+    ) {
 
-            document.documentElement.scrollTop = newPosition;
-            document.body.scrollTop = newPosition;
+        healthFaucetBoxes.forEach(function (box, i) {
 
-            if(progress < 1){
-                requestAnimationFrame(animateScroll);
-            }
-        }
+            gsap.from(box, {
 
-        requestAnimationFrame(animateScroll);
+                opacity: 0,
 
-    });
+                x: i % 2 === 0
+                    ? -80
+                    : 80,
+
+                duration: 1.4,
+
+                ease: "power3.out",
+
+                scrollTrigger: {
+
+                    trigger: box,
+
+                    start: "top 90%",
+
+                    once: true
+                }
+            });
+
+        });
+    }
+
+
+    /* =========================================
+       CUSTOM PROJECT BOX ANIMATION
+    ========================================= */
+
+    const projectBoxes =
+        document.querySelectorAll(".custom-project-box");
+
+
+    if (
+        projectBoxes.length > 0 &&
+        typeof ScrollTrigger !== "undefined"
+    ) {
+
+        projectBoxes.forEach(function (box, i) {
+
+            gsap.from(box, {
+
+                opacity: 0,
+
+                x: i % 2 === 0
+                    ? -80
+                    : 80,
+
+                duration: 1.4,
+
+                ease: "power3.out",
+
+                scrollTrigger: {
+
+                    trigger: box,
+
+                    start: "top 90%",
+
+                    once: true
+                }
+            });
+
+        });
+    }
 
 });
-
-
-// gsap animation for the health-faucet images
-
-
-
-gsap.utils.toArray(".helthfaucet-box").forEach((box, i) => {
-
-    gsap.from(box, {
-        opacity: 0,
-        x: i % 2 === 0 ? -80 : 80,
-        duration: 1.4,
-        ease: "power3.out",
-
-        scrollTrigger: {
-            trigger: box,
-            start: "top 90%",
-            once: true
-        }
-    });
-
-});
-
-
-
-
-
-
-gsap.utils.toArray(".custom-project-box").forEach((box, i) => {
-
-     gsap.from(box, {
-        opacity: 0,
-        x: i % 2 === 0 ? -80 : 80,
-        duration: 1.4,
-        ease: "power3.out",
-
-        scrollTrigger: {
-            trigger: box,
-            start: "top 90%",
-            once: true
-        }
-    });
-
-});
-
