@@ -218,53 +218,327 @@
 
 
 
-         
-<!--download section start catalogue-->
 
-        <section class="services-style2-service-page">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-5">
-                        <div class="sec-title">
-                            <p>Categories</p>
-                            <div class="title">Download <span>Catalogue</span></div>
-                        </div>
-                    </div>
-                    <div class="col-xl-7">
-                        <div class="text">
-                            <p></p>
-                        </div>
-                    </div>
+<section class="nufera-catalogue-section">
+
+    <div class="container">
+
+        <!-- Section Heading -->
+        <div class="nufera-catalogue-heading">
+            <p>NUFERA COLLECTION</p>
+
+            <h2>
+                Download <span>Catalogue</span>
+            </h2>
+
+            <div class="nufera-heading-line"></div>
+
+            <p class="nufera-catalogue-subtitle">
+                Explore our latest collection, products and designs
+                in the Nufera catalogue.
+            </p>
+        </div>
+
+
+        <!-- Catalogue Card -->
+        <div class="nufera-catalogue-card">
+
+            <div class="nufera-catalogue-image">
+
+                <img
+                    src="img-1/home/working-01.jpg"
+                    alt="Nufera Catalogue"
+                >
+
+                <div class="nufera-catalogue-overlay"></div>
+
+                <div class="nufera-catalogue-content">
+
+                    <span class="nufera-catalogue-label">
+                        NUFERA
+                    </span>
+
+                    <h3>
+                        Product Catalogue
+                    </h3>
+
+                    <p>
+                        Discover our complete range of products
+                        and collections.
+                    </p>
+
+                    <a
+                        href="#"
+                        class="nufera-download-btn"
+                    >
+                        Download Catalogue
+                        <span class="flaticon-next"></span>
+                    </a>
+
                 </div>
-                <div class="row">
 
-
-                    <!--Start single service style2-->
-                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-                        <div class="single-service-style2 wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1200ms">
-                            <div class="img-holder">
-                                <img src="img-1/home/working-01.jpg" alt="Awesome Image">
-                                <div class="overlay-style-two"></div>
-                            </div>
-                            <div class="text-holder">
-                               
-                                <div class="inner">
-                                   
-                                   
-                                    <div class="read-more">
-                                        <a class="btn-one" href="#">Download<span class="flaticon-next"></span></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End single service style2-->
-
-                    
-                </div>
             </div>
-        </section>
-        <!--End services style2 Service Page-->
+
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+
+.nufera-catalogue-section {
+    position: relative;
+    width: 100%;
+    padding: 90px 0 100px;
+    background: #f8f8f6;
+    overflow: hidden;
+}
+
+
+
+.nufera-catalogue-heading {
+    max-width: 750px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.nufera-catalogue-heading > p:first-child {
+    margin: 0 0 10px;
+    color:  #8e0a0a;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.nufera-catalogue-heading h2 {
+    margin: 0;
+    color: #27282c;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.nufera-catalogue-heading h2 span {
+    color:  #8e0a0a;
+}
+
+.nufera-heading-line {
+    width: 55px;
+    height: 3px;
+    margin: 18px auto 20px;
+    background:  #8e0a0a;
+}
+
+.nufera-catalogue-subtitle {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #777;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.nufera-catalogue-card {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.nufera-catalogue-image {
+    position: relative;
+    width: 100%;
+    min-height: 430px;
+    overflow: hidden;
+    background: #222;
+    border-radius: 4px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
+}
+
+.nufera-catalogue-image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.nufera-catalogue-card:hover
+.nufera-catalogue-image img {
+    transform: scale(1.05);
+}
+
+
+
+
+.nufera-catalogue-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.78) 0%,
+        rgba(0, 0, 0, 0.55) 45%,
+        rgba(0, 0, 0, 0.15) 100%
+    );
+    z-index: 1;
+}
+
+
+
+
+.nufera-catalogue-content {
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+    padding: 80px 60px;
+}
+
+.nufera-catalogue-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.nufera-catalogue-content h3 {
+    margin: 0 0 15px;
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.nufera-catalogue-content p {
+    max-width: 430px;
+    margin: 0 0 28px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+
+
+.nufera-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 24px;
+    color: #ffffff !important;
+    background:  #8e0a0a;
+    border: 1px solid   #8e0a0a;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.nufera-download-btn span {
+    font-size: 13px;
+    transition: transform 0.3s ease;
+}
+
+.nufera-download-btn:hover {
+    color: #e9212e !important;
+    background: #ffffff;
+    border-color: #ffffff;
+}
+
+.nufera-download-btn:hover span {
+    transform: translateX(5px);
+}
+
+
+
+@media (max-width: 991px) {
+
+    .nufera-catalogue-section {
+        padding: 70px 20px 80px;
+    }
+
+    .nufera-catalogue-heading {
+        margin-bottom: 40px;
+    }
+
+    .nufera-catalogue-heading h2 {
+        font-size: 40px;
+    }
+
+    .nufera-catalogue-image {
+        min-height: 400px;
+    }
+
+    .nufera-catalogue-content {
+        padding: 65px 45px;
+    }
+
+    .nufera-catalogue-content h3 {
+        font-size: 34px;
+    }
+
+}
+
+
+
+@media (max-width: 767px) {
+
+    .nufera-catalogue-section {
+        padding: 55px 15px 65px;
+    }
+
+    .nufera-catalogue-heading {
+        margin-bottom: 30px;
+    }
+
+    .nufera-catalogue-heading > p:first-child {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .nufera-catalogue-heading h2 {
+        font-size: 31px;
+    }
+
+    .nufera-catalogue-subtitle {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .nufera-catalogue-image {
+        min-height: 450px;
+    }
+
+    .nufera-catalogue-overlay {
+        background: rgba(0, 0, 0, 0.68);
+    }
+
+    .nufera-catalogue-content {
+        max-width: 100%;
+        padding: 55px 30px;
+        text-align: center;
+    }
+
+    .nufera-catalogue-content h3 {
+        font-size: 30px;
+    }
+
+    .nufera-catalogue-content p {
+        font-size: 14px;
+    }
+
+    .nufera-download-btn {
+        padding: 12px 18px;
+        font-size: 12px;
+    }
+
+}
+
+
+</style>
 
 
 

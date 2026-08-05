@@ -1,5 +1,5 @@
 
-/* for section start*/
+/* form section start*/
 
 .fera-contact-section{
     padding:80px 0;
@@ -115,12 +115,12 @@
     padding:40px;
     border-radius:20px;
     background:#636363;
-    color:#fff;
+    color:#eedbdb;
     box-shadow:0 20px 50px rgba(0,0,0,.08);
 }
 
 .fera-contact-info h3{
-    font-size:32px;
+    font-size:20px;
     margin:12px 0 35px;
     color: #ffffff;
 }
@@ -132,6 +132,7 @@
 .fera-info-item h4{
     margin-bottom:8px;
     color:#fff;
+    font-size:18px;
 }
 
 .fera-info-item p{
@@ -208,7 +209,7 @@
 
 
 
-/* mao  section start*/
+/* map  section start*/
 
 .fera-map-section{
     width:100%;
