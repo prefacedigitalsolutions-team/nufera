@@ -1,9 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* =========================================
-       SCROLL TOP + WHATSAPP BUTTON
-    ========================================= */
+  // scroll top warshap button
 
     const feraTopBtn = document.getElementById("feraScrollTop");
     const feraWhatsapp = document.querySelector(".fera-whatsapp-btn");
@@ -91,59 +89,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
         });
     }
+});
 
 
-    /* =========================================
-       GSAP ANIMATION
-    ========================================= */
-
-    // Check GSAP
-    if (typeof gsap === "undefined") {
-        console.warn("GSAP is not loaded.");
-        return;
-    }
 
 
-    /* Register ScrollTrigger only if available */
+// gsap section start
+if (typeof gsap !== "undefined") {
 
     if (typeof ScrollTrigger !== "undefined") {
         gsap.registerPlugin(ScrollTrigger);
     }
 
-
-    /* =========================================
-       HEALTH FAUCET ANIMATION
-    ========================================= */
+    /* Health Faucet Animation */
 
     const healthFaucetBoxes =
         document.querySelectorAll(".helthfaucet-box");
 
-
-    if (
-        healthFaucetBoxes.length > 0 &&
-        typeof ScrollTrigger !== "undefined"
-    ) {
+    if (healthFaucetBoxes.length > 0) {
 
         healthFaucetBoxes.forEach(function (box, i) {
 
             gsap.from(box, {
-
                 opacity: 0,
-
-                x: i % 2 === 0
-                    ? -80
-                    : 80,
-
-                duration: 1.4,
-
-                ease: "power3.out",
+                x: i % 2 === 0 ? -50 : 50,
+                duration: 0.8,
+                ease: "power2.out",
 
                 scrollTrigger: {
-
                     trigger: box,
-
                     start: "top 90%",
-
                     once: true
                 }
             });
@@ -152,44 +127,52 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* =========================================
-       CUSTOM PROJECT BOX ANIMATION
-    ========================================= */
+    /* Custom Project Box Animation */
 
     const projectBoxes =
         document.querySelectorAll(".custom-project-box");
 
+    if (projectBoxes.length > 0) {
 
-    if (
-        projectBoxes.length > 0 &&
-        typeof ScrollTrigger !== "undefined"
-    ) {
+        const mm = gsap.matchMedia();
 
-        projectBoxes.forEach(function (box, i) {
+        /* Desktop */
 
-            gsap.from(box, {
+        mm.add("(min-width: 769px)", function () {
 
-                opacity: 0,
+            projectBoxes.forEach(function (box, i) {
 
-                x: i % 2 === 0
-                    ? -80
-                    : 80,
+                gsap.from(box, {
+                    opacity: 0,
+                    x: i % 2 === 0 ? -50 : 50,
+                    duration: 0.8,
+                    ease: "power2.out",
 
-                duration: 1.4,
+                    scrollTrigger: {
+                        trigger: box,
+                        start: "top 90%",
+                        once: true
+                    }
+                });
 
-                ease: "power3.out",
-
-                scrollTrigger: {
-
-                    trigger: box,
-
-                    start: "top 90%",
-
-                    once: true
-                }
             });
 
         });
+
+
+        /* Mobile */
+
+        mm.add("(max-width: 768px)", function () {
+
+            gsap.set(projectBoxes, {
+                opacity: 1,
+                x: 0,
+                y: 0,
+                scale: 1
+            });
+
+        });
+
     }
 
-});
+}
