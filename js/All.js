@@ -94,7 +94,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// gsap section start
+// gsap section start product page
+
 if (typeof gsap !== "undefined") {
 
     if (typeof ScrollTrigger !== "undefined") {
